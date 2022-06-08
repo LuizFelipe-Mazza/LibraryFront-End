@@ -1,0 +1,27 @@
+.containerSigIn {
+  flex-direction: column;
+}
+.login {
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(https://wallpaperaccess.com/full/3853210.jpg) no-repeat;
+  background-position: center;
+}
+.login form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+}
+.emailField {
+  margin-bottom: 2rem;
+}
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

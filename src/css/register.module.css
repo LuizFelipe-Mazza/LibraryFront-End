@@ -1,0 +1,66 @@
+.container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerForm {
+  background: url(https://i.pinimg.com/originals/82/e4/2d/82e42dbaaaa3bf51f0a4d556a4c0b744.jpg);
+  background-position: center;
+  padding: 0.8rem;
+}
+form h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+form span {
+  color: #7d5fff;
+}
+form {
+  margin-top: 2px;
+  background: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+}
+input {
+  color: #192a56;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 0.5rem;
+  border: #d1d8e0 2px solid;
+  padding: 0.4rem;
+  width: 20rem;
+}
+form select {
+  color: #1dd1a1;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 0.5rem;
+  border: #d1d8e0 2px solid;
+  padding: 0.4rem;
+  width: 20rem;
+}
+form select option {
+  font-weight: 600;
+  color: #2f3640;
+  background: #f5f6fa;
+}
+h4 {
+  color: #353b48;
+  margin-top: 10px;
+}
+.info {
+  display: flex;
+  margin-top: 5px;
+}
+.caixa {
+  display: flex;
+}
+.minContainer {
+  margin-left: 40px;
+}
