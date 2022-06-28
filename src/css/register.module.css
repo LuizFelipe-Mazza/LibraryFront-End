@@ -1,33 +1,41 @@
-.container {
-  margin-top: 1rem;
+/* .container {
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 40px;
+  flex-direction: column;
+  width: 70%;
 }
 .containerForm {
-  background: url(https://i.pinimg.com/originals/82/e4/2d/82e42dbaaaa3bf51f0a4d556a4c0b744.jpg);
+  background: url(https://images6.alphacoders.com/394/394751.jpg);
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.8rem;
 }
-form h1 {
+.form h1 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-form span {
+.form span {
   color: #7d5fff;
 }
-form {
+.form {
+  padding: 1rem 1rem;
+  width: 60%;
   margin-top: 2px;
   background: #f5f6fa;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 4rem;
   border-radius: 0.5rem;
 }
-input {
+ .form input {
+  min-width: 15rem;
   color: #192a56;
   font-weight: 600;
   font-size: 12px;
@@ -36,7 +44,7 @@ input {
   padding: 0.4rem;
   width: 20rem;
 }
-form select {
+.form select {
   color: #1dd1a1;
   font-weight: 600;
   font-size: 12px;
@@ -45,7 +53,7 @@ form select {
   padding: 0.4rem;
   width: 20rem;
 }
-form select option {
+.form select option {
   font-weight: 600;
   color: #2f3640;
   background: #f5f6fa;
@@ -63,4 +71,4 @@ h4 {
 }
 .minContainer {
   margin-left: 40px;
-}
+} */
