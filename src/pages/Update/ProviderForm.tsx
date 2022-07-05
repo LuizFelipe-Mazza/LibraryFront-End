@@ -2,27 +2,28 @@ import Aside from '../../assets/undraw_account_re_o7id.svg'
 import styles from '../../css/updateUser.module.css'
 import BookmarkAddedTwoToneIcon from '@mui/icons-material/BookmarkAddedTwoTone'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Provider } from '../../Services/registerProvider'
-import { useFormContext } from 'react-hook-form'
-import { Input } from '../../components'
+import { useForm } from 'react-hook-form'
+import { InputRef } from '../../components/input/InputBase'
 
 export function ProviderForm() {
   const { id } = useParams()
-const [data, setData] = useState(null);
+
 
   const {
+    register,
     setValue
-  } = useFormContext()
+  } = useForm()
 
   useEffect(() => {
     async function getByProvider() {
       const { data } = await Provider(Number(id))
-     setData(data)
       if (data) {
         setValue('name', data.name)
         setValue('name_fant', data.name_fant)
         setValue('city', data.city)
+        setValue('state', data.state)
         setValue('street', data.street)
         setValue('number', data.number)
         setValue('zip_code', data.zip_code)
@@ -50,40 +51,44 @@ const [data, setData] = useState(null);
           </div>
 
           <div className={styles.inputEdit}>
-            <Input placeholder="Editar Nome"  
-            name='name'
+            <InputRef type='text' placeholder="Editar Nome"  
+            {...register('name')}
             />
           </div>
 
            <div className={styles.inputEdit}>
-            <Input placeholder="Editar Nome Fantasia" name='name_fant'
+            <InputRef type='text' placeholder="Editar Nome Fantasia" {...register('name_fant')}
             />
           </div> 
 
            <div className={styles.inputEdit}>
-            <Input placeholder="Editar Cidade" name='city'/>
+            <InputRef type='text' placeholder="Editar Cidade" {...register('city')}/>
           </div>
 
           <div className={styles.inputEdit}>
-            <Input  placeholder="Editar Cod Postal" name='zip_code' />
+            <InputRef type='text' placeholder="Editar Estado" {...register('state')}/>
           </div>
 
           <div className={styles.inputEdit}>
-            <Input placeholder="Editar Rua" name='street' />
+            <InputRef type='number' placeholder="Editar Cod Postal" {...register('zip_code')} />
           </div>
 
           <div className={styles.inputEdit}>
-            <Input placeholder="Editar Número" name='number' 
+            <InputRef type='text' placeholder="Editar Rua" {...register('street')} />
+          </div>
+
+          <div className={styles.inputEdit}>
+            <InputRef type='number' placeholder="Editar Número" {...register('number')}
             />
           </div>
 
           <div className={styles.inputEdit}>
-            <Input placeholder="Editar Telefone" name='phone_number'
+            <InputRef type='number' placeholder="Editar Telefone" {...register('phone_number')}
             />
           </div>
 
           <div className={styles.inputEdit}>
-            <Input placeholder="Editar Celular" name='cel' />
+            <InputRef type='number' placeholder="Editar Celular" {...register('cel')} />
           </div> 
 
           <div className={styles.buttonEdit}>
