@@ -9,8 +9,8 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 2rem;
-  justify-content: space-around;
   background: #191919;
 
   h1 {
@@ -26,28 +26,48 @@ nav h1 span {
 nav h1 span img {
   margin-left: 10px;
 }
-
-nav input {
-  display: flex;
-  flex-direction: row;
-  margin-left: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  outline-color: #2c3a47;
-  border: #d1d8e0 2px solid;
-  border-radius: 0.5rem;
-  padding: 4px;
-
-  width: 35rem;
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .input {
+    padding: 5px;
+    width: 40px;
+    max-width: 28rem;
+    height: 40px;
+    background: none;
+    border: 2px solid #7d5fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: #7d5fff;
+    outline: none;
+    transition: 0.5s;
+  }
+  .i {
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #7d5fff;
+    transition: 0.2s;
+  }
+}
+.box:hover .input {
+  width: 28rem;
+  background: #202020;
+  border-radius: 10px;
 }
 
-.sub {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
+.box:hover .i {
+  opacity: 0;
+  z-index: -1;
 }
 .login {
   display: flex;
+  justify-content: right;
   flex-direction: row;
 }
 
@@ -220,6 +240,7 @@ nav input {
     margin-right: 10rem;
   }
 }
+
 @media screen and (max-width: 960px) {
   nav {
     position: absolute;
@@ -354,12 +375,11 @@ nav input {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   nav {
     width: 100%;
     position: absolute;
-    padding:2rem;
+    padding: 2rem;
   }
 
   .mobileMenu {
@@ -494,7 +514,7 @@ nav input {
   nav {
     width: 100%;
     position: absolute;
-    padding:2rem;
+    padding: 2rem;
   }
 
   .mobileMenu {
@@ -611,7 +631,7 @@ nav input {
     color: #f1f2f6;
     width: 6rem;
     border: none;
-    margin-right:10px;
+    margin-right: 10px;
   }
 
   .login .createAccount {
@@ -629,7 +649,7 @@ nav input {
   nav {
     width: 100%;
     position: absolute;
-    padding:1rem;
+    padding: 1rem;
   }
 
   .mobileMenu {
@@ -746,7 +766,7 @@ nav input {
     color: #f1f2f6;
     width: 5rem;
     border: none;
-    margin-right:5px;
+    margin-right: 5px;
   }
 
   .login .createAccount {
