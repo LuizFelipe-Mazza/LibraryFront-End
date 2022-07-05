@@ -7,7 +7,12 @@ import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded
 import ManageAccountsRoundedIcon from '@mui/icons-material/ManageAccountsRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+
 export function PublicHeader() {
+ const mudar = function transformInput(){ 
+   "document.search.txt.value = '' "
+ }
   return (
     <div className='containerHeader'>
       <nav>
@@ -27,10 +32,11 @@ export function PublicHeader() {
         <h1>
           Biblioteca<span> Digital </span>
         </h1>
-        <div className='sub'>
-          <div className='input'>
-            <input type="text" placeholder="Buscar Livro" />
-          </div>
+      <div className='box'>
+          <form name='search'>
+            <input type="text" className='input' name='txt' onMouseOut={mudar}/>
+            </form>
+            <SearchOutlinedIcon className='i'/>
         </div>
 
         <div className='login'>
