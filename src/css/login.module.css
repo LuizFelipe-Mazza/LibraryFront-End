@@ -21,12 +21,12 @@
 
  .form {
   min-width: 330px;
-  background: #f5f6fa;
+  background: #202020;
   width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1px;
   border-radius: 1rem;
   padding: 3rem;
 }
@@ -43,6 +43,28 @@
 .emailField {
   margin-bottom: 2rem;
 }
+
+.form button{
+  margin-bottom: 10px;
+}
+
+.btnGoogle{
+  width: 20rem !important;
+  border-radius: 10px !important;
+  color: #192a56 !important;
+}
+
+.btnGoogle div{
+  font-size: 0 !important;
+  border-radius: 20px !important;
+  padding: 6px 6px 6px !important;
+  margin-left: 10px !important;
+}
+
+.btnGoogle span{
+  margin-left: 30px !important;
+}
+
 .links {
   margin-top: 5px;
   display: flex;
