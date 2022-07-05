@@ -1,19 +1,21 @@
 import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import { DataProvider } from '../Form/type'
 import { Table } from '../table/Table'
 
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import EditIcon from '@mui/icons-material/Edit';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
+import EditIcon from '@mui/icons-material/Edit'
 
-import styles from'../../css/tableContainer.module.css'
+import styles from '../../css/tableContainer.module.css'
 import api from '../../Services/axios'
 
 export default function TableContainer() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
 
   const columns: GridColDef[] = [
+    { field: 'id', headerName: 'ID', width: 90 },
     {
       field: 'name',
       headerName: 'Nome',
@@ -28,7 +30,7 @@ export default function TableContainer() {
       field: 'email',
       headerName: 'E-mail',
       sortable: false,
-      width: 150
+      width: 150,
     },
     {
       field: 'city',
@@ -41,21 +43,27 @@ export default function TableContainer() {
       headerName: 'Ações',
       width: 150,
       editable: false,
-      renderCell:(params: GridRenderCellParams<any, any, any>) =>(
+      renderCell: (params: GridRenderCellParams<any, any, any>) => (
         //criar nova tela para a edição das informações dos usuários
         //criar modal confirmando ação (se usuário tiver certeza que quer deletar)
         //criar para salvar no banco de dados
         //fazer o input de pesquisa funcionar
         <>
-        <button className={styles.btnDelete} onClick={()=>{}}><DeleteForeverIcon/></button>
-  
-        <button className={styles.btnEditar} onClick={()=>{
-          navigate(`/update/${params.id}`)
-        }}>
-        <EditIcon/></button>
+          <button className={styles.btnDelete} onClick={() => {}}>
+            <DeleteForeverIcon />
+          </button>
+
+          <button
+            className={styles.btnEditar}
+            onClick={() => {
+              navigate(`/update/${params.id}`)
+            }}
+          >
+            <EditIcon />
+          </button>
         </>
-      )
-    }
+      ),
+    },
   ]
   const [page, setPage] = useState(1)
   const [pageSize, setPageSize] = useState(4)
@@ -72,7 +80,5 @@ export default function TableContainer() {
     listProvider()
   }, [])
 
-  return (
-     <Table data={providers} columns={columns}/>  
-  )
+  return <Table data={providers} columns={columns} />
 }
