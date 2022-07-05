@@ -1,4 +1,4 @@
-/* .container {
+.container {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -16,6 +16,7 @@
   padding: 0.8rem;
 }
 .form h1 {
+  color: #f5f6fa;
   text-align: center;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -27,7 +28,7 @@
   padding: 1rem 1rem;
   width: 60%;
   margin-top: 2px;
-  background: #f5f6fa;
+  background: #202020;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +60,7 @@
   background: #f5f6fa;
 }
 h4 {
-  color: #353b48;
+  color: #f5f6fa;
   margin-top: 10px;
 }
 .info {
@@ -71,4 +72,4 @@ h4 {
 }
 .minContainer {
   margin-left: 40px;
-} */
+}
