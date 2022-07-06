@@ -2,7 +2,7 @@ import { SubmitHandler, useFormContext } from 'react-hook-form'
 import { Button, Input } from '../../components'
 import { DataProvider } from './type'
 
-import styles from '../../css/register.module.css'
+import styles from './register.module.css'
 import '../../css/global.css'
 
 

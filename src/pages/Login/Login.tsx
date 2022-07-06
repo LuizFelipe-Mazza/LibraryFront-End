@@ -2,7 +2,7 @@ import { Button, Input } from '../../components'
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin } from 'react-google-login'
 
-import styles from '../../css/login.module.css'
+import styles from './login.module.css'
 export function Login() {
   const navigate = useNavigate()
 

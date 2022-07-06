@@ -1,16 +1,16 @@
 import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { DataProvider } from '../Form/type'
+import { DataProvider } from '../Register/type'
 import { Table } from '../table/Table'
 
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import EditIcon from '@mui/icons-material/Edit'
 
-import styles from '../../css/tableContainer.module.css'
+import styles from './providerList.module.css'
 import api from '../../Services/axios'
 
-export default function TableContainer() {
+export default function ProviderList() {
   const navigate = useNavigate()
 
 

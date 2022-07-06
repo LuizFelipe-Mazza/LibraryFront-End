@@ -1,6 +1,6 @@
 import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
 
-import "../../css/publicheader.scss";
+import "./publicheader.scss";
 import DisplaySettingsRoundedIcon from '@mui/icons-material/DisplaySettingsRounded';
 import GroupAddRoundedIcon from '@mui/icons-material/GroupAddRounded';
 import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded';
