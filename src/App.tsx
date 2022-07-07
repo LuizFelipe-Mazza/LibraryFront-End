@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { PublicHeader } from './pages/Headers/PublicHeader/PublicHeader';
+import { PublicHeader } from './pages/Screen/PublicHeader/PublicHeader';
 import { ProviderFormContainer } from './pages/containers/providerFormContainer';
 import  ProviderList  from './pages/containers/ProviderList';
 import { Login } from './pages/Login/Login';
