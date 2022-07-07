@@ -1,4 +1,4 @@
-body{
+body {
   background: #fff;
 }
 
@@ -13,20 +13,22 @@ nav {
 }
 nav h1 {
   color: #2c3a47;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 nav h1 span {
-  color:#7d5fff;
-  font-family: "Poppins";
+  color: #7d5fff;
+  font-family: 'Poppins';
 }
 
-nav h1 span img{
+nav h1 span img {
   margin-left: 10px;
 }
 
 nav input {
-  margin-left:0;
-  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   outline-color: #2c3a47;
   border: #d1d8e0 2px solid;
@@ -39,7 +41,7 @@ nav select {
   text-align: left;
   color: #fff;
   background: #2c3a47;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   outline-color: 2px solid #2c3a47;
   border: none;
@@ -47,7 +49,7 @@ nav select {
   font-size: 14px;
 }
 
-nav select option{
+nav select option {
   background: #dfe4ea;
   color: #2c3a47;
 }
@@ -56,4 +58,14 @@ nav select option{
   width: 50%;
   display: flex;
   justify-content: space-between;
+}
+.search {
+  position: absolute;
+  top: 38px;
+  left: 58.5rem;
+  color: #7d5fff;
+}
+
+.search svg{
+  padding: 1rem;
 }

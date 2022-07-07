@@ -1,4 +1,4 @@
-import '../../../css/button.module.css'
+import './button.scss'
 import { ButtonProps } from './type'
 
 export function Button({ isOutlined = false, ...props }: ButtonProps) {
