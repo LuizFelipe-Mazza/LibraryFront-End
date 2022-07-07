@@ -1,5 +1,5 @@
 import Aside from '../../assets/undraw_account_re_o7id.svg'
-import styles from '../../css/updateUser.module.css'
+import styles from '../../Styles/updateUser.module.css'
 import BookmarkAddedTwoToneIcon from '@mui/icons-material/BookmarkAddedTwoTone'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
