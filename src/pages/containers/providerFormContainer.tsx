@@ -1,5 +1,5 @@
 import FormContext from "../../context/FormContext";
-import { Register } from "../Form/Register";
+import { Register } from "../Register/Register";
 
 export function ProviderFormContainer(){
     return(

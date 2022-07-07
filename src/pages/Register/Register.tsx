@@ -3,7 +3,7 @@ import { Button, Input } from '../../components'
 import { DataProvider } from './type'
 
 import styles from './register.module.css'
-import '../../css/global.css'
+import '../../Styles/global.css'
 
 
 export function Register() {
