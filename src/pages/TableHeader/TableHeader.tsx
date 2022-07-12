@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import { useState } from 'react'
 import { Input } from '../../components'
-import './tableHeader.module.css'
+import './tableHeader.scss'
 type Props = {
   label: string
   onSearch: (value: string) => void

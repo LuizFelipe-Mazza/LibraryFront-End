@@ -2,7 +2,7 @@ import { Button, Input } from '../../components'
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin } from 'react-google-login'
 
-import styles from './login.module.css'
+import'./login.scss'
 export function Login() {
   const navigate = useNavigate()
 
@@ -12,28 +12,28 @@ export function Login() {
   }
 
   return (
-    <div className={styles.login}>
-      <form className={styles.form} action="">
-        <div className={styles.containerSigIn}>
+    <div className='containerLogin'>
+      <form action="">
+        <div className='containerSigIn'>
           <h1>
             Log<span>In</span>
             <small>Library</small>
           </h1>
 
-          <div className={styles.emailField}>
+          <div className='emailField'>
             <Input name="Insira o E-mail" />
           </div>
 
-          <div className={styles.passwordField}>
+          <div className='passwordField'>
             <Input type="password" name="Insira a Senha" />
 
-            <div className={styles.links}>
+            <div className='links'>
               <a href=".">Esqueci a Senha</a>
               <a href="/register">Cadastrar</a>
             </div>
             <Button onClick={HomeClick}>Entrar</Button>
             <GoogleLogin
-              className={styles.btnGoogle}
+              className='btnGoogle'
               clientId="512809359891-i53ug9f9k324m38d1tlkai6jb9ttuktt.apps.googleusercontent.com"
               buttonText="Continuar com Google"
             />

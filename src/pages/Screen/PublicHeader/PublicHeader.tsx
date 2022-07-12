@@ -1,6 +1,8 @@
 import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
 
-import gallery from '../../../assets/pexels-cottonbro-4058797.jpg'
+import gallery from '../../../assets/pexels-cottonbro-4058797.jpg';
+import livro from '../../../assets/reading.png'
+import logo from '../../../assets/logo.png';
 
 import "./publicheader.scss";
 import DisplaySettingsRoundedIcon from '@mui/icons-material/DisplaySettingsRounded';
@@ -31,9 +33,7 @@ export function PublicHeader() {
             <li> <a className='menuItem' href="/"><ManageAccountsRoundedIcon className='icon'/> Sua conta</a></li>
           </ul>
         </div>
-        <h1>
-          Biblioteca<span> Digital </span>
-        </h1>
+        <img className='logo' src={logo} alt="logo" />
       <div className='box'>
           <form name='search'>
             <input type="text" className='input' name='txt' onMouseOut={mudar}/>
@@ -54,7 +54,14 @@ export function PublicHeader() {
         <h1>Fique por dentro de nossas promoções</h1>
         <span>Preços imperdíveis</span>
       </aside>
-      
+      <div className="card">
+        <div className="title">
+        <h2>Lógica de programação</h2>
+        </div>
+        <div className="product">
+          <img src={livro} alt="" />
+        </div>
+      </div>
     </div>
   );
 }
