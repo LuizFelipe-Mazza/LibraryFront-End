@@ -1,5 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
 body {
   background: #202020;
+}
+.containerHeader {
+  overflow: hidden;
 }
 .mobileMenu {
   display: none;
@@ -12,19 +22,6 @@ nav {
   justify-content: space-between;
   padding: 2rem;
   background: #191919;
-
-  h1 {
-    color: #f1f2f6;
-    font-family: 'Poppins';
-  }
-}
-nav h1 span {
-  color: #7d5fff;
-  font-family: 'Poppins';
-}
-
-nav h1 span img {
-  margin-left: 10px;
 }
 .box {
   position: absolute;
@@ -107,303 +104,151 @@ nav h1 span img {
   border: none;
 }
 
-.gallery{
-  img{
+.logo {
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid #7d5fff;
+}
+
+.gallery {
+  img {
     width: 100%;
     height: 50%;
   }
-  span{
+  span {
     width: 40ch;
-    font-family:'Poppins';
+    font-family: 'Poppins';
     font-size: 3rem;
-    color:#fff;
+    color: #fff;
     position: absolute;
     top: 29rem;
     left: 5rem;
     white-space: nowrap;
     border-right: 3px solid;
-    animation: typing 4s steps(40), blink .3s step-end infinite alternate;
+    animation: typing 4s steps(40), blink 0.3s step-end infinite alternate;
     overflow: hidden;
-  
   }
   @keyframes typing {
-    from{
+    from {
       width: 0;
     }
   }
-
   @keyframes blink {
-    50%{
+    50% {
       border-color: transparent;
     }
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 393px) {
   nav {
-    position: absolute;
-    padding: 2rem;
-  }
-
-  .mobileMenu {
-    display: inline;
-
-    #menu__toggle {
-      opacity: 0;
-    }
-    #menu__toggle:checked + .menuBtn > span {
-      transform: rotate(45deg);
-    }
-
-    #menu__toggle:checked + .menuBtn > span::before {
-      top: 0;
-      transform: rotate(0deg);
-    }
-
-    #menu__toggle:checked + .menuBtn > span::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-
-    #menu__toggle:checked ~ .menuBox {
-      left: 0 !important;
-    }
-    .menuBtn {
-      position: fixed;
-      top: 60px;
-      left: 50px;
-      width: 26px;
-      height: 26px;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .menuBtn > span,
-    .menuBtn > span::before,
-    .menuBtn > span::after {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: #7d5fff;
-      transition-duration: 0.25s;
-    }
-    .menuItem:hover {
-      background: #2c3a47;
-    }
-
-    .menuBtn > span::before {
-      content: '';
-      top: -8px;
-    }
-    .menuBtn > span::after {
-      content: '';
-      top: 8px;
-    }
-
-    .menuBox {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 300px;
-      height: 100%;
-      margin: 0;
-      padding: 80px 0;
-      list-style: none;
-      background-color: #181818;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-      transition-duration: 0.25s;
-    }
-
-    .menuItem {
-      display: block;
-      padding: 12px 12px;
-      color: #fff;
-      font-family: 'Poppins';
-      font-size: 20px;
-      font-family: 600;
-      text-decoration: none;
-      transition-duration: 0.25s;
-    }
-    .menuItem:hover {
-      background: #7d5fff;
-    }
-
-    .icon {
-      font-size: 18px;
-      color: #7d5fff;
-    }
-  }
-
-  nav h1 {
-    color: #f1f2f6;
-    font-family: 'Poppins';
-    font-size: 20px;
-    margin-left: 15rem;
     width: 100%;
-  }
-  nav h1 span {
-    color: #7d5fff;
-    font-family: 'Poppins';
-  }
+    height: 5rem;
 
-  nav input {
-    display: none;
-  }
+    .mobileMenu {
+      display: inline;
 
-  .login .enterAccount {
-    background: #7d5fff;
-    font-size: 12px;
-    font-weight: 700;
-    color: #f1f2f6;
-    width: 7rem;
-    border: none;
-    margin-right: 10px;
-  }
+      #menu__toggle {
+        opacity: 0;
+      }
+      #menu__toggle:checked + .menuBtn > span {
+        transform: rotate(45deg);
+      }
 
-  .login .createAccount {
-    width: 7rem;
-    font-size: 12px;
-    color: #f1f2f6;
-    font-weight: 700;
-    background: #7d5fff;
-    border: none;
-    margin-right: 10rem;
-  }
-}
+      #menu__toggle:checked + .menuBtn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+      }
 
-@media screen and (max-width: 960px) {
-  nav {
-    position: absolute;
-    padding: 2rem;
-  }
+      #menu__toggle:checked + .menuBtn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
 
-  .mobileMenu {
-    display: inline;
+      #menu__toggle:checked ~ .menuBox {
+        left: 0 !important;
+      }
+      .menuBtn {
+        position: fixed;
+        top: 40px;
+        left: 50px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+      }
 
-    #menu__toggle {
-      opacity: 0;
-    }
-    #menu__toggle:checked + .menuBtn > span {
-      transform: rotate(45deg);
-    }
+      .menuBtn > span,
+      .menuBtn > span::before,
+      .menuBtn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #7d5fff;
+        transition-duration: 0.25s;
+      }
+      .menuItem:hover {
+        background: #2c3a47;
+      }
 
-    #menu__toggle:checked + .menuBtn > span::before {
-      top: 0;
-      transform: rotate(0deg);
-    }
+      .menuBtn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menuBtn > span::after {
+        content: '';
+        top: 8px;
+      }
 
-    #menu__toggle:checked + .menuBtn > span::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
+      .menuBox {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #181818;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        transition-duration: 0.25s;
+      }
 
-    #menu__toggle:checked ~ .menuBox {
-      left: 0 !important;
-    }
-    .menuBtn {
-      position: fixed;
-      top: 60px;
-      left: 50px;
-      width: 26px;
-      height: 26px;
-      cursor: pointer;
-      z-index: 1;
-    }
+      .menuItem {
+        display: block;
+        padding: 12px 12px;
+        color: #fff;
+        font-family: 'Poppins';
+        font-size: 20px;
+        font-family: 600;
+        text-decoration: none;
+        transition-duration: 0.25s;
+      }
+      .menuItem:hover {
+        background: #7d5fff;
+      }
 
-    .menuBtn > span,
-    .menuBtn > span::before,
-    .menuBtn > span::after {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: #7d5fff;
-      transition-duration: 0.25s;
-    }
-    .menuItem:hover {
-      background: #2c3a47;
-    }
-
-    .menuBtn > span::before {
-      content: '';
-      top: -8px;
-    }
-    .menuBtn > span::after {
-      content: '';
-      top: 8px;
-    }
-
-    .menuBox {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 300px;
-      height: 100%;
-      margin: 0;
-      padding: 80px 0;
-      list-style: none;
-      background-color: #181818;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-      transition-duration: 0.25s;
+      .icon {
+        font-size: 18px;
+        color: #7d5fff;
+      }
     }
 
-    .menuItem {
-      display: block;
-      padding: 12px 12px;
-      color: #fff;
-      font-family: 'Poppins';
-      font-size: 20px;
-      font-family: 600;
-      text-decoration: none;
-      transition-duration: 0.25s;
+    nav input {
+      display: none;
     }
-    .menuItem:hover {
-      background: #7d5fff;
+    .login .enterAccount {
+      display: none;
+    }
+    .login .createAccount {
+      display: none;
     }
 
-    .icon {
-      font-size: 18px;
-      color: #7d5fff;
+    .logo {
+      display: none;
     }
-  }
-
-  nav h1 {
-    color: #f1f2f6;
-    font-family: 'Poppins';
-    font-size: 20px;
-    margin-left: 15rem;
-    width: 100%;
-  }
-  nav h1 span {
-    color: #7d5fff;
-    font-family: 'Poppins';
-  }
-
-  nav input {
-    display: none;
-  }
-
-  .login .enterAccount {
-    background: #7d5fff;
-    font-size: 12px;
-    font-weight: 700;
-    color: #f1f2f6;
-    width: 7rem;
-    border: none;
-    margin-right: 10px;
-  }
-
-  .login .createAccount {
-    width: 7rem;
-    font-size: 12px;
-    color: #f1f2f6;
-    font-weight: 700;
-    background: #7d5fff;
-    border: none;
-    margin-right: 8rem;
   }
 }
 
@@ -541,142 +386,6 @@ nav h1 span img {
     margin-right: 7rem;
   }
 }
-
-@media screen and (max-width: 660px) {
-  nav {
-    width: 100%;
-    position: absolute;
-    padding: 2rem;
-  }
-
-  .mobileMenu {
-    display: inline;
-
-    #menu__toggle {
-      opacity: 0;
-    }
-    #menu__toggle:checked + .menuBtn > span {
-      transform: rotate(45deg);
-    }
-
-    #menu__toggle:checked + .menuBtn > span::before {
-      top: 0;
-      transform: rotate(0deg);
-    }
-
-    #menu__toggle:checked + .menuBtn > span::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-
-    #menu__toggle:checked ~ .menuBox {
-      left: 0 !important;
-    }
-    .menuBtn {
-      position: fixed;
-      top: 50px;
-      left: 20px;
-      width: 26px;
-      height: 26px;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .menuBtn > span,
-    .menuBtn > span::before,
-    .menuBtn > span::after {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: #7d5fff;
-      transition-duration: 0.25s;
-    }
-    .menuItem:hover {
-      background: #2c3a47;
-    }
-
-    .menuBtn > span::before {
-      content: '';
-      top: -8px;
-    }
-    .menuBtn > span::after {
-      content: '';
-      top: 8px;
-    }
-
-    .menuBox {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 250px;
-      height: 100%;
-      margin: 0;
-      padding: 80px 0;
-      list-style: none;
-      background-color: #181818;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-      transition-duration: 0.25s;
-    }
-
-    .menuItem {
-      display: block;
-      padding: 12px 12px;
-      color: #fff;
-      font-family: 'Poppins';
-      font-size: 20px;
-      font-family: 600;
-      text-decoration: none;
-      transition-duration: 0.25s;
-    }
-    .menuItem:hover {
-      background: #7d5fff;
-    }
-
-    .icon {
-      font-size: 10px;
-      color: #7d5fff;
-    }
-  }
-
-  nav h1 {
-    color: #f1f2f6;
-    font-family: 'Poppins';
-    font-size: 16px;
-    margin-left: 8rem;
-    width: 100%;
-  }
-  nav h1 span {
-    color: #7d5fff;
-    font-family: 'Poppins';
-  }
-
-  nav input {
-    display: none;
-  }
-
-  .login .enterAccount {
-    background: #7d5fff;
-    font-size: 10px;
-    font-weight: 700;
-    color: #f1f2f6;
-    width: 6rem;
-    border: none;
-    margin-right: 10px;
-  }
-
-  .login .createAccount {
-    width: 6rem;
-    font-size: 10px;
-    color: #f1f2f6;
-    font-weight: 700;
-    background: #7d5fff;
-    border: none;
-    margin-right: 7rem;
-  }
-}
-
 
 @media screen and (max-width: 480px) {
   nav {
