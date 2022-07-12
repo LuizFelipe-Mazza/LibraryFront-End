@@ -5,6 +5,7 @@ import  ProviderList  from './pages/containers/ProviderList';
 import { Login } from './pages/Login/Login';
 import { Presentation } from './pages/Presentation/Presentation';
 import { About } from './pages/About/About';
+import { NewBook } from './pages/RegisterBook/NewBook';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login"  element={<Login />} />
           <Route path="/update/:id"  element={<ProviderFormContainer/>} />
           <Route path='/table'element={<ProviderList/>} />
+          <Route path='/newbook'element={<NewBook/>} />
         </Routes>
       </BrowserRouter>
     </div>
