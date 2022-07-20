@@ -14,13 +14,13 @@ function App() {
     <div className="App">
         <BrowserRouter>
         <Routes>
-          <Route path="/"  index={false} element={<PublicHeader />} />
-          <Route path="/welcome" element={<Presentation/>} />
-          <Route path="/aboutlibrary" element={<About/>} />
-          <Route path="/login"  element={<Login />} />
-          <Route path="/update/:id"  element={<ProviderFormContainer/>} />
-          <Route path='/table'element={<ProviderList/>} />
-          <Route path='/newbook'element={<NewBook/>} />
+          <Route path="/"  index={false} children element={<PublicHeader />} />
+          <Route path="/welcome" index={false} element={<Presentation/>} />
+          <Route path="/aboutlibrary" index={false} element={<About/>} />
+          <Route path="/login" index={false}  element={<Login />} />
+          <Route path="/update/:id" index={false}  element={<ProviderFormContainer/>} />
+          <Route path='/table' index={false}element={<ProviderList/>} />
+          <Route path='/newbook' index={false}element={<NewBook/>} />
         </Routes>
       </BrowserRouter>
     </div>
