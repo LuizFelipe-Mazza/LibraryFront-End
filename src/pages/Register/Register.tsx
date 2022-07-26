@@ -1,136 +1,71 @@
-import { SubmitHandler, useFormContext } from 'react-hook-form'
-import { Button, Input } from '../../components'
-import { DataProvider } from './type'
+import { Input } from '../../components'
 
-import'./register.scss'
+import PermIdentityRoundedIcon from '@mui/icons-material/PermIdentityRounded';
+import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
+import CallRoundedIcon from '@mui/icons-material/CallRounded';
 
+import './register.scss'
 
 export function Register() {
-  const { handleSubmit } = useFormContext<DataProvider>()
-
-  const onSubmit: SubmitHandler<DataProvider> = (data) => console.log(data)
 
   return (
-    <div className='containerForm'>
-      <header className='header'></header>
-    
-        <form className='form' onSubmit={handleSubmit(onSubmit)}>
-          <div className='container'>
-            <h1>
-              Cadastro do <span>Fornecedor</span>
-            </h1>
+    <div className='Provider'>
+      <div className="providerRegister">
+        <div className="providerField">
+          <h3>Fornecedor <PermIdentityRoundedIcon className='iconCP'/></h3>
+          <div className="name">
+            <Input name="name" placeholder="Nome Fantasia" />
+          </div>
+          <div className="cnpj">
+            <Input name="cnpj" placeholder="CNPJ" />
+          </div>
+          <div className="email">
+            <Input name="email" placeholder="Email" />
+          </div>
+        </div>
 
-            <div className='caixa'>
-              <div className='minContainer'>
-                <h4>Nome Fantasia</h4>
-                <div className='info'>
-                  <Input placeholder="Insira Nome Fantasia" name="name_fant" />
-                </div>
-              </div>
-              {/* colocar o name pois é  obrigatório e passar o formProvider por volta do Form */}
-              <div className='minContainer'>
-                <h4>Cidade</h4>
-                <div className='info'>
-                  <Input placeholder="Insira a Cidade" name="city" />
-                </div>
-              </div>
+        <div className="providerContact">
+          <h3>Contato <CallRoundedIcon className='iconCP'/> </h3>
+          <div className="phoneNumber">
+            <Input name="phone_number" placeholder="N Telefone" />
+          </div>
+          <div className="cel">
+            <Input name="cel" placeholder="Celular" />
+          </div>
+        </div>
+
+        <div className="addressField">
+          <h3>Endereço <LocationOnRoundedIcon className='iconCP'/></h3>
+          <div className="cityAndStreet">
+            <div className="city">
+              <Input name="city" placeholder="Cidade" />
             </div>
-
-            <div className='caixa'>
-              <div className='minContainer'>
-                <h4>Nome</h4>
-                <div className='info'>
-                  <Input placeholder="Insira o Nome" name="name" />
-                </div>
-              </div>
-
-              <div className='minContainer'>
-                <h4>Complemento</h4>
-                <div className='info'>
-                <Input placeholder="Insira o Complemento" name="comp" />
-                </div>
-              </div>
-            </div>
-
-            <div className='caixa'>
-              <div className='minContainer'>
-                <h4>CNPJ</h4>
-                <div className='info'>
-                  <Input placeholder="Insira o CNPJ" name="cnpj" />
-                </div>
-              </div>
-
-              <div className='minContainer'>
-                <h4>Código Postal</h4>
-                <div className='info'>
-                  <Input placeholder="Insira o Código Postal" name="zip_code" />
-                </div>
-              </div>
-            </div>
-
-            <div className='caixa'>
-              <div className='minContainer'>
-                <h4>Email</h4>
-                <div className='info'>
-                  <Input placeholder="Insira o E-mail" name="email" />
-                </div>
-              </div>
-
-              <div className='minContainer'>
-                <h4>Rua</h4>
-                <div className='info'>
-                  <Input placeholder="Insira a Rua" name="street" />
-                </div>
-              </div>
-            </div>
-
-            <div className='caixa'>
-              <div className='minContainer'>
-                <h4>Celular</h4>
-                <div className='info'>
-                  <Input placeholder="Insira o Nº de Celular" name="cel" />
-                </div>
-              </div>
-
-              <div className='minContainer'>
-                <h4>Número</h4>
-                <div className='info'>
-                  <Input
-                    placeholder="Insira o Número Complemento"
-                    name="number"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className='caixa'>
-              <div className='minContainer'>
-                <h4>Telefone</h4>
-                <div className='info'>
-                  <Input placeholder="Insira o Telefone" name="phone_number" />
-                </div>
-              </div>
-
-              <div className='minContainer'>
-                <h4>Estado</h4>
-                <div className='info'>
-                  <select>
-                    <option selected value="State">
-                      SP
-                    </option>
-                    <option value="State">RJ</option>
-                    <option value="State">AM</option>
-                    <option value="State">RS</option>
-                  </select>
-                </div>
-              </div>
+            <div className="street">
+              <Input name="street" placeholder="Rua" />
             </div>
           </div>
-          <Button type="submit" onClick={handleSubmit(onSubmit)}>
-            Cadastrar
-          </Button>
-        </form>
- 
+
+          <div className="complementAndNumber">
+            <div className="complement">
+              <Input name="complement" placeholder="Complemento" />
+            </div>
+
+            <div className="number">
+              <Input name="number" placeholder="Número" />
+            </div>
+          </div>
+
+          <div className="zipCodeAndState">
+            <div className="zipCode">
+              <Input name="zip_code" placeholder="Cód Postal" />
+            </div>
+            <div className="state">
+              <Input name="state" placeholder="Estado" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button>cadastrar</button>
     </div>
   )
 }
