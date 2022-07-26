@@ -4,6 +4,7 @@ import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import './newbook.scss'
 
 export function NewBook() {
+  
   return (
     <>
     <div className="containerBookRegister">
@@ -23,18 +24,18 @@ export function NewBook() {
         <div className="formRegisterSelect">
           <input className='numberBook' type="text" placeholder="Nº Pag:" />
         <select className='code' name="books" id="#book">
-            <option value="" selected >Categorias</option>
-            <option value="">Romance</option>
-            <option value="">Ficção Científica</option>
-            <option value="">Comédia</option>
-            <option value="">Ação</option>
-            <option value="">Tecnologia</option>
-            <option value="">Programação</option>
-            <option value="">Terror</option>
-            <option value="">Nutrição</option>
-            <option value="">História</option>
-            <option value="">Bioloigia</option>
-            <option value="">Religiosos</option>
+            <option  defaultValue={'Categoria'} >Categorias</option>
+            <option value="Romance">Romance</option>
+            <option value="Ficção Científica">Ficção Científica</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Ação">Ação</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Programação">Programação</option>
+            <option value="Terror">Terror</option>
+            <option value="Nutrição">Nutrição</option>
+            <option value="História">História</option>
+            <option value="Bioloigia">Bioloigia</option>
+            <option value="Religiosos">Religiosos</option>
         </select>
         </div>
         <div className="formRegisterBookCode">
