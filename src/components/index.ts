@@ -1,3 +1,3 @@
 export { Input } from "./input/Input";
 export { Button } from "./button/Button";
-export {If} from './If'
+export {If} from './If/If'
