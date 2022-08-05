@@ -1,6 +1,5 @@
 import './card.scss'
 import Capa from '../../assets/pqnp.webp'
-
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 

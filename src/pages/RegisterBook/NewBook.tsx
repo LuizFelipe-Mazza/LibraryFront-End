@@ -10,19 +10,19 @@ export function NewBook() {
     <div className="containerBookRegister">
       <aside className="newBook">
         <div className="formRegisterBook">
-          <input className='inputBook' type="text" placeholder="Título:" />
+          <input className='inputBook' type="text" placeholder="Título:" minLength={4} maxLength={12} />
         </div>
 
         <div className="formRegisterBook">
-          <input className='inputBook' type="text" placeholder="Editora:" />
+          <input className='inputBook' type="text" placeholder="Editora:" minLength={4} maxLength={12} />
         </div>
 
         <div className="formRegisterBook">
-          <input className='inputBook' type="text" placeholder="Data Lançamento:" />
+          <input className='inputBook' type="text" placeholder="Data Lançamento:" minLength={5} maxLength={8} />
         </div>
 
         <div className="formRegisterSelect">
-          <input className='numberBook' type="text" placeholder="Nº Pag:" />
+          <input className='numberBook' type="text" placeholder="Nº Pag:" minLength={1} maxLength={5} />
         <select className='code' name="books" id="#book">
             <option  defaultValue={'Categoria'} >Categorias</option>
             <option value="Romance">Romance</option>
@@ -39,7 +39,7 @@ export function NewBook() {
         </select>
         </div>
         <div className="formRegisterBookCode">
-          <input className='numberBook' type="text" placeholder="N° Livro:" />
+          <input className='numberBook' type={'date'} placeholder="N° Livro:" minLength={5} maxLength={12} />
           <input className='code' type="text" placeholder="Cod ISBN:" />
         </div>
         <div className="formRegisterBook">
@@ -51,7 +51,7 @@ export function NewBook() {
       </aside>
       <main>
         <div className="photoBox">
-            <img src="" alt="" />
+            <input type={'file'} />
         </div>
         <button className='btnUpload'><CloudUploadRoundedIcon className='uploadIcon'/> Enviar Foto</button>
       </main>
