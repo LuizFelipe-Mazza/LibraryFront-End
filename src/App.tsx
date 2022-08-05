@@ -9,7 +9,7 @@ import { About } from './pages/About/About';
 import { Login } from './pages/Login/Login';
 
 import  ProviderList  from './pages/containers/ProviderList';
-import { Card } from './components/Card/Card';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/update/:id" element={<ProviderFormContainer/>} />
           <Route path='/table' element={<ProviderList/>} />
           <Route path='/newbook'element={<NewBook/>} />
-          <Route path='/card'element={<Card/>} />
+          <Route path='/footer'element={<Footer/>}/>
           
         </Routes>
         </AuthContextProvider>
