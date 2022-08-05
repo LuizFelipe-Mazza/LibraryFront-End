@@ -1,25 +1,34 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { PublicHeader } from './pages/Screen/PublicHeader/PublicHeader';
 import { ProviderFormContainer } from './pages/containers/providerFormContainer';
-import  ProviderList  from './pages/containers/ProviderList';
-import { Login } from './pages/Login/Login';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthContextProvider } from './context/AuthContext';
+import { RegisterUser } from './pages/RegisterUser/RegisterUser';
 import { Presentation } from './pages/Presentation/Presentation';
-import { About } from './pages/About/About';
+import { PublicPage } from './pages/Screen/Public/PublicPage';
 import { NewBook } from './pages/RegisterBook/NewBook';
+import { About } from './pages/About/About';
+import { Login } from './pages/Login/Login';
+
+import  ProviderList  from './pages/containers/ProviderList';
+import { Card } from './components/Card/Card';
 
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
+        <AuthContextProvider>
         <Routes>
-          <Route path="/"  children element={<PublicHeader />} />
-          <Route path="/welcome" element={<Presentation/>} />
+          <Route path="/"  children element={<PublicPage />} />
+          <Route path="/welcome" children element={<Presentation/>} />
           <Route path="/aboutlibrary" element={<About/>} />
           <Route path="/login"  element={<Login />} />
+          <Route path="/registeruser"  element={<RegisterUser />} />
           <Route path="/update/:id" element={<ProviderFormContainer/>} />
           <Route path='/table' element={<ProviderList/>} />
           <Route path='/newbook'element={<NewBook/>} />
+          <Route path='/card'element={<Card/>} />
+          
         </Routes>
+        </AuthContextProvider>
       </BrowserRouter>
     </div>
   );
