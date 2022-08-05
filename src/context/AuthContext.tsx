@@ -1,47 +1,52 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
+import api from '../Services/axios'
+import { login } from '../Services/userApi'
 
-type Link = string
-
-type User = {
-  id: number
-  id_persona?: number
-  avatar?: Link
-  name: string
-}
-type AuthContextType = {
-  user: User | undefined
-  signInWithGoogle: () => Promise<void>
-}
 type AuthContextProviderProps = {
   children: ReactNode
 }
 
-export const AuthContext = createContext({} as AuthContextType)
+export const AuthContext = createContext({})
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
-  const [user, setUser] = useState<User>()
+  const [user, setUser] = useState({})
 
   useEffect(() => {
-    const unsuscribe = (user: any) => {
-      if (user) {
-        const { displayName, photURL, id } = user
-        if (!displayName || !photURL) {
-          throw new Error('Missing information from Google Account')
-        }
-        setUser({
-          id: id,
-          name: displayName,
-          avatar: photURL,
-        })
+    async function loadingStorageData() {
+      const storageUser = localStorage.getItem('@Auth:user')
+      const storageToken = localStorage.getItem('@Auth:token')
+
+      if (storageUser && storageToken) {
+        setUser(storageUser)
       }
     }
-    return () => {
-      unsuscribe('')
-    }
+    loadingStorageData()
   }, [])
-  // return (
-  //   <AuthContext.Provider value={{ user }}>
-  //     {props.children}
-  //   </AuthContext.Provider>
-  // )
+
+  const signIn = async (email: string, password: string) => {
+    const response = await login(email, password)
+
+    if (response.data.error) {
+      alert(response.data.error)
+    } else {
+      setUser(response.data)
+      api.defaults.headers.common[
+        'Authorization'
+      ] = `Bearer ${response.data.token}`
+      localStorage.setItem('@Auth:token', response.data.token)
+      localStorage.setItem('@Auth:user', response.data.user)
+    }
+  }
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        signed: !!user,
+        signIn,
+      }}
+    >
+      {props.children}
+    </AuthContext.Provider>
+  )
 }
