@@ -10,6 +10,7 @@ export function Login() {
   const { email, setEmail, password, setPassword, SignIn } = Context()
   return (
     <>
+    <div className="containerOfContainer">
       <div className="loginContainer">
         <h1>
           Log<span>in</span>
@@ -18,17 +19,19 @@ export function Login() {
         <div className="bgLogin">
 
           <div className="email">
+            <h3>Email</h3>
             <input type="text" 
             name='email' 
-            placeholder="Email" 
+            placeholder="example23@gmail.com" 
             value={email}
             onChange={event => setEmail(event.target.value)}/>
           </div>
 
           <div className="password">
+            <h3>Senha</h3>
             <input type="password" 
             name='password' 
-            placeholder="Senha" 
+            placeholder="Insira a Senha" 
             value={password}
             onChange={event => setPassword(event.target.value)}/>
           </div>
@@ -40,7 +43,7 @@ export function Login() {
             </div>
 
             <div className="create">
-              <a href="/createaccount">Criar Conta</a>
+              <a href="/registeruser">Criar Conta</a>
             </div>
 
           </div>
@@ -57,6 +60,7 @@ export function Login() {
             buttonText="Continuar com Google"/>
 
         </div>
+      </div>
       </div>
     </>
   )

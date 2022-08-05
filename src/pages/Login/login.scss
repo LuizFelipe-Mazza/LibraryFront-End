@@ -5,71 +5,101 @@
   font-family: 'Poppins';
 }
 body {
-  display: flex;
-  justify-content: center;
-  background: #202020;
+  background: url(../../assets/bgGif.webp) no-repeat;
+    background-size: cover;
 }
-.loginContainer {
+.containerOfContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  width: 30rem;
-  margin-top: 7rem;
-  h1 {
-    color: #fff;
-    font-size: 50px;
-    font-weight: 600;
-    span {
-      color: #7d5fff;
-    }
-    small {
-      color: #7d5fff;
-      font-size: 14px;
-      text-decoration: underline;
-      .iconLogin {
+  align-items: center;
+  margin-top: 4rem;
+  .loginContainer {
+    background: #282829;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30rem;
+    border: 0.1rem solid rgba(28, 28, 28, 0.1);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 600;
+      span {
+        color: #7d5fff;
+      }
+      small {
+        color: #7d5fff;
         font-size: 14px;
-        margin-left: 5px;
+        text-decoration: underline;
+        .iconLogin {
+          font-size: 14px;
+          margin-left: 5px;
+        }
       }
     }
-  }
-  input {
-    border-radius: 4px;
-    border: none;
-    width: 20rem;
-    padding: 8px;
-    outline-color: #7d5fff;
-  }
-  .email {
-    margin-top: 20px;
-  }
-  .password {
-    margin-top: 30px;
-    margin-bottom: 3px;
-  }
-  .btnGoogle div {
-    font-size: 0 !important;
-    border-radius: 20px !important;
-    padding: 6px 6px 6px !important;
-    margin-left: 10px !important;
-  }
-  .btnGoogle {
-    opacity: (100) !important;
-    margin-top: 10px;
-    width: 20rem;
-    border-radius: 8px !important;
-    cursor: pointer;
-  }
-  .links {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    a {
-      font-size: 13px;
-      color: #7d5fff;
+    input {
+      color: #fff;
+      background: transparent;
+      border-radius: 4px;
+      border: none;
+      width: 20rem;
+      padding: 8px;
+      border: #7d5fff 1px solid;
     }
-  }
-  .or {
-    text-align: center;
+    .email {
+      margin-top: 20px;
+    }
+    .password {
+      margin-top: 30px;
+      margin-bottom: 3px;
+    }
+    .btnGoogle div {
+      font-size: 0 !important;
+      border-radius: 20px !important;
+      padding: 6px 6px 6px !important;
+      margin-left: 10px !important;
+    }
+    .btnGoogle {
+      opacity: (100) !important;
+      margin-top: 10px;
+      width: 20rem;
+      border-radius: 8px !important;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      a {
+        font-size: 13px;
+        color:#9c88ff;
+        text-decoration: none;
+      }
+      a:hover {
+        transition: .3s ease;
+        color:#fff;
+      }
+    }
+    .or {
+      font-size: 13px;
+      margin-top: 5px;
+      text-align: center;
+      color: #fff;
+    }
+    ::placeholder {
+      color: #d2dae2;
+      padding-left: 5px;
+      font-size: 12px;
+    }
+    h3{
+      color: #d2dae2;
+      font-size: 13px;
+      font-weight: 600;
+    }
   }
 }
