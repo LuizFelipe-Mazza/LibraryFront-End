@@ -4,6 +4,7 @@ import './publicPage.scss'
 import Livro from '../../../assets/undraw_reading_time_re_phf7.svg'
 
 import { Sidebar } from '../../../components/Sidebar/Sidebar';
+import { Footer } from '../../../components/Footer/Footer';
 
 import CreditCardRoundedIcon from '@mui/icons-material/CreditCardRounded';
 import PixRoundedIcon from '@mui/icons-material/PixRounded';
@@ -97,6 +98,7 @@ export function PublicPage() {
 
         </div>
       </div>
+      <Footer/>
     </>
   )
 }
