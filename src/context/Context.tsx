@@ -20,15 +20,19 @@ export function Context() {
         titleText: 'Os campos estão Vazios',
         confirmButtonColor: '#835afd',
         confirmButtonText: 'Tudo Bem',
+        color:'#fff',
+        background:'#202020'
       })
     }
     const response = await login(email, password)
-    localStorage.setItem('@library/token', btoa(response.data.token))
+    localStorage.setItem('@Auth:token', (response.data.token))
 
     if (response.status >= 400) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
+        color:'#fff',
+        background:'#202020',
         text: 'E-mail ou senha Incorretos!',
         footer: '<a href="">Deseja Registrar-se?</a>',
       })
