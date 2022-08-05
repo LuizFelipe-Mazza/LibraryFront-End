@@ -101,6 +101,10 @@
       line-height: 60px;
       cursor: pointer;
     }
+    .iconMenu:hover {
+      transition: all 0.3s linear;
+      color: #7d5fff;
+    }
   }
   #check {
     display: none;
