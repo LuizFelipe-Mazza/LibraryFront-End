@@ -2,8 +2,9 @@ import './card.scss'
 import Capa from '../../assets/pqnp.webp'
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
+import { Book } from '../../Types/type';
 
-export function Card() {
+export function Card(props:Book) {
   return (
     <>
       <div className="cardBuy">
@@ -12,7 +13,7 @@ export function Card() {
             <img className="image" src={Capa} alt="" />
           </div>
           <div className="titleProduct">
-            <h2>O Pequeno Principe</h2>
+            <h2>{props.name}</h2>
           </div>
           <div className="price">
             <h1>129,99 R$</h1>

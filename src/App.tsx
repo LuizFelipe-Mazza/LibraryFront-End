@@ -9,7 +9,8 @@ import { About } from './pages/About/About';
 import { Login } from './pages/Login/Login';
 
 import  ProviderList  from './pages/containers/ProviderList';
-import { Footer } from './components/Footer/Footer';
+import { Cart } from './pages/Cart/Cart';
+import { MyCart } from './components/Modal/MyCart';
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
           <Route path="/update/:id" element={<ProviderFormContainer/>} />
           <Route path='/table' element={<ProviderList/>} />
           <Route path='/newbook'element={<NewBook/>} />
-          <Route path='/footer'element={<Footer/>}/>
-          
+           <Route path='/cart'element={<Cart/>}/> 
+          <Route path='/shopping'element={<MyCart/>}/>
         </Routes>
         </AuthContextProvider>
       </BrowserRouter>

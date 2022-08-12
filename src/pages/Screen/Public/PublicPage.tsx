@@ -11,9 +11,23 @@ import PixRoundedIcon from '@mui/icons-material/PixRounded';
 import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
 import { Card } from '../../../components/Card/Card';
 
+import { useEffect, useState } from 'react';
+import { ShowAllBooks, showBook } from '../../../Services/Book';
+import { Book } from '../../../Types/type';
+import Loading from '../../../components/Loading/Loading';
+
 
 export function PublicPage() {
+  const[books, setBooks] = useState<Book[]>([] as Book[]);
   const navigate = useNavigate()
+
+
+  useEffect(()=>{
+    ShowAllBooks().then(b =>{
+      setBooks(b)
+    })
+  },[])
+
   function HandleLogin(event: any) {
     event.preventDefault()
     navigate('/login')
@@ -77,25 +91,28 @@ export function PublicPage() {
             <span>Você Também Pode Gostar</span>
           </div>
         <div className="publicProducts">
-          <div className="product">
-            <Card/>
-          </div>
-          <div className="product2">
-            <Card/>
-          </div>
-          <div className="product3">
-            <Card/>
-          </div>
-          <div className="product4">
-            <Card/>
-          </div>
-          <div className="product5">
-            <Card/>
-          </div>
-          <div className="product6">
-            <Card/>
-          </div>
-
+          {
+            !books.length  ?
+            <div style={{display:'flex',
+            width: '100%',
+            justifyContent:'center'
+          }}><Loading/></div>  : books.map((book:Book) => (
+              <Card key={book.product_code} name={book.name} 
+              name_translated={book.name_translated} 
+              original_name={book.original_name} 
+              number_of_pages={book.number_of_pages} 
+              summary={book.summary} 
+              authors={book.authors} 
+              illustrators={book.illustrators} //ta ai?
+              cover_image={book.cover_image} 
+              year_of_last_publication={book.year_of_last_publication} 
+              subject={book.subject} 
+              product_code={book.product_code} 
+              isbn={book.isbn} 
+              book_number={book.book_number} 
+              position_on_the_shelf={book.position_on_the_shelf} />
+            ))
+          }
         </div>
       </div>
       <Footer/>
