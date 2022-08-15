@@ -13,10 +13,10 @@ export async function ShowAllBooks():Promise<Book[]>{
     const books:Book[] =[
         {
             name_translated: 'O pequeno Principe',
-            original_name: 'string',
-            name: 'string',
+            original_name: 'O pequeno Principe',
+            name: 'O pequeno Principe',
             number_of_pages: 0,
-            summary: 'string',
+            summary: 'O pequeno Principe',
             authors: 'string',
             illustrators: 'string',
             cover_image: 'string',
@@ -29,10 +29,13 @@ export async function ShowAllBooks():Promise<Book[]>{
 
         }
     ]
-    setTimeout((resolve)=>{
-        resolve(books)
-    }, 3000)
-    return await api.get('/book')
+  
+    return await new Promise ((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(books)
+            api.get('/book')
+        }, 3000)
+    })
 }
 export async function createBook(name:string,name_translated:string,original_name:string,number_of_pages: number,summary:string,authors:string,illustrators:string, cover_image:string,year_of_last_publication:Date,subject:string, product_code: string,isbn:string,book_number:string,position_on_the_shelf:string ){
     return await api.post(`/createBook', ${name}, ${name_translated},${original_name},${number_of_pages},${summary},${authors},${illustrators},${cover_image},${year_of_last_publication},${subject},${product_code},${isbn},${book_number},${position_on_the_shelf}`)
