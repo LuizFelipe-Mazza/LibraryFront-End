@@ -106,14 +106,13 @@ export function PublicPage() {
             authors={book.authors}
             illustrators={book.illustrators}
             cover_image={book.cover_image}
-            year_of_last_publication={book.year_of_last_publication}
             subject={book.subject}
             product_code={book.product_code}
             isbn={book.isbn}
             book_number={book.book_number}
             price={book.price}
             weight={book.weight}
-            position_on_the_shelf={book.position_on_the_shelf} children={undefined} />
+            position_on_the_shelf={book.position_on_the_shelf} />
             ))
           }
         </div>
