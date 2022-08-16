@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+.Provider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  button {
+    cursor: pointer;
+    border: none;
+    margin-top: 2rem;
+    width: 25rem;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    background: #7d5fff;
+    color: #fff;
+    font-weight: 500;
+  }
+  button:hover {
+    transition: 0.4s ease;
+    box-shadow: 1px 1px 8px #a29bfe;
+  }
+
+  button:active {
+    transition: 0.3s ease;
+    background: #3c40c6;
+  }
+}
+
+.providerRegister {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+  .addressField {
+    text-align: center;
+    border: 0.1rem solid rgba(28, 28, 28, 0.1);
+    background: #282829;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    .cityAndStreet,
+    .complementAndNumber,
+    .zipCodeAndState {
+      display: flex;
+      margin-top: 10px;
+    }
+    .street,
+    .number,
+    .state {
+      margin-left: 20px;
+    }
+
+    input {
+      color: #fff;
+      background: transparent;
+      border-radius: 5px;
+      outline-color: #3c40c6;
+      width: 21rem;
+      padding: 6px;
+      border: #7d5fff 1px solid;
+    }
+
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      margin-bottom: 15px;
+      .iconCP {
+        font-size: 25px;
+        margin-left: 5px;
+        color: #7d5fff;
+      }
+    }
+  }
+
+  .providerField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid rgba(28, 28, 28, 0.1);
+    background: #282829;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    h3 {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .iconCP {
+        font-size: 25px;
+        margin-left: 5px;
+        color: #7d5fff;
+      }
+    }
+    input {
+      color: #fff;
+      border-radius: 5px;
+      background: transparent;
+      border: none;
+      outline-color: #3c40c6;
+      width: 20rem;
+      padding: 6px;
+      border: #7d5fff 1px solid;
+    }
+    .name {
+      margin-top: 15px;
+    }
+    .email,
+    .password,
+    .cnpj {
+      margin-top: 10px;
+    }
+  }
+  .providerContact {
+    border: 0.1rem solid rgba(28, 28, 28, 0.1);
+    background: #282829;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    input {
+      color: #fff;
+      border-radius: 5px;
+      background: transparent;
+      border: none;
+      outline-color: #3c40c6;
+      width: 20rem;
+      padding: 6px;
+      margin-top: 15px;
+      border: #7d5fff 1px solid;
+    }
+
+    h3 {
+      margin-top: 2px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      .iconCP {
+        color: #7d5fff;
+        margin-left: 5px;
+        font-size: 25px;
+      }
+    }
+  }
+  ::placeholder {
+    color: #d2dae2;
+    padding-left: 7px;
+  }
+}

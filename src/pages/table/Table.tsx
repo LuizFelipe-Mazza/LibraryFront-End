@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { DataGrid, GridColDef, GridRowsProp } from '@mui/x-data-grid'
-import { TableHeader } from './TableHeader'
+import { TableHeader } from '../TableHeader/TableHeader'
 import Box from '@mui/material/Box'
-import '../../css/table.css'
+import './table.css'
 
 interface Column {
   headerName: string

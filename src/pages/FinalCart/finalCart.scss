@@ -1,0 +1,33 @@
+.containerFinal {
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-family: 'Nunito';
+      color: #fff;
+    }
+  }
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+      .buttonBuy {
+        width: 21rem;
+        padding: 12px;
+        color: #fff;
+        font-family: 'Nunito';
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        background: #6c5ce7;
+        margin-top: 30px;
+      }
+      .buttonBuy:hover {
+        background: #f5f6fa;
+        color: #6c5ce7;
+        transition: 0.3s ease;
+      }
+  }
+}

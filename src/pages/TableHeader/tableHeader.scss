@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+  background: #181818;
+}
+
+.inputFilter .inputTable {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Poppins';
+  color: #6c5ce7;
+  border: #7d5fff 1px solid;
+  padding: 2px;
+  outline-color: #55efc4;
+  border-radius: 4px;
+}

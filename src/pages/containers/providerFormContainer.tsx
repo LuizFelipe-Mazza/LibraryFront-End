@@ -1,11 +1,11 @@
 import FormContext from "../../context/FormContext";
-import { ProviderForm } from "../FormProvider/ProviderForm";
+import { Register } from "../Register/Register";
 
 export function ProviderFormContainer(){
     return(
         <>
         <FormContext validationSchema={''}>
-        <ProviderForm/>
+        <Register />
         </FormContext>
         </>
     )

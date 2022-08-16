@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body{
+    background: url(../../assets/bgGif.webp) no-repeat;
+    background-size: cover;
+}
+.containerUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .User {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #282829;
+    width: 30rem;
+    border-radius: 10px;
+    padding: 15px;
+    border: 0.1rem solid rgba(28, 28, 28, 0.1);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-top: 5rem;
+    input {
+      color: #fff;
+      background: transparent;
+      border-radius: 4px;
+      border: none;
+      width: 20rem;
+      padding: 8px;
+      border: #7d5fff 1px solid;
+    }
+    .nameUserField,
+    .emailUserField,
+    .passwordUserField,
+    .confirmPasswordUserField {
+      margin-top: 15px;
+    }
+    .linksUser {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        color: #d2dae2;
+        font-size: 12px;
+        a {
+          color: #7d5fff;
+        }
+      }
+    }
+    button {
+      margin-top: 30px;
+    }
+    ::placeholder {
+      color: #b2bec3;
+      padding-left: 3px;
+      font-size: 12px;
+    }
+
+    h1 {
+      color: #d2dae2;
+      font-family: 'Nunito';
+      span {
+        color: #7d5fff;
+        font-family: 'Nunito';
+      }
+    }
+
+    h3 {
+      color: #d2dae2;
+      font-weight: 600;
+      font-size: 13px;
+    }
+  }
+}
