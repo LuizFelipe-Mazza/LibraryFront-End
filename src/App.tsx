@@ -26,8 +26,8 @@ function App() {
           <Route path="/update/:id" element={<ProviderFormContainer/>} />
           <Route path='/table' element={<ProviderList/>} />
           <Route path='/newbook'element={<NewBook/>} />
-           <Route path='/cart'element={<Cart/>}/> 
-          <Route path='/shopping'element={<MyCart/>}/>
+           <Route path='/book/:product_code'element={<Cart/>}/> 
+          <Route path='/mycart'element={<MyCart/>}/> 
         </Routes>
         </AuthContextProvider>
       </BrowserRouter>

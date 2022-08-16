@@ -49,6 +49,7 @@ export function PublicPage() {
             </li>
             <li>
               <a href="/">Sobre</a>
+              
             </li>
             <li>
               <a href="/">Contato</a>
@@ -97,20 +98,22 @@ export function PublicPage() {
             width: '100%',
             justifyContent:'center'
           }}><Loading/></div>  : books.map((book:Book) => (
-              <Card key={book.product_code} name={book.name} 
-              name_translated={book.name_translated} 
-              original_name={book.original_name} 
-              number_of_pages={book.number_of_pages} 
-              summary={book.summary} 
-              authors={book.authors} 
-              illustrators={book.illustrators} //ta ai?
-              cover_image={book.cover_image} 
-              year_of_last_publication={book.year_of_last_publication} 
-              subject={book.subject} 
-              product_code={book.product_code} 
-              isbn={book.isbn} 
-              book_number={book.book_number} 
-              position_on_the_shelf={book.position_on_the_shelf} />
+              <Card key={book.product_code} name={book.name}
+            name_translated={book.name_translated}
+            original_name={book.original_name}
+            number_of_pages={book.number_of_pages}
+            summary={book.summary}
+            authors={book.authors}
+            illustrators={book.illustrators}
+            cover_image={book.cover_image}
+            year_of_last_publication={book.year_of_last_publication}
+            subject={book.subject}
+            product_code={book.product_code}
+            isbn={book.isbn}
+            book_number={book.book_number}
+            price={book.price}
+            weight={book.weight}
+            position_on_the_shelf={book.position_on_the_shelf} children={undefined} />
             ))
           }
         </div>

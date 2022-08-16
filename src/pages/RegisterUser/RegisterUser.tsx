@@ -44,6 +44,7 @@ if(password  !== confPassword ){
         title: 'Oops...',
         text: 'as senhas não coincidem',
       })
+      return
 }
     await createUser(name, email, password)
    Swal.fire({

@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 export type Book = {
     name_translated: string,
     original_name: string,
@@ -9,9 +10,11 @@ export type Book = {
     cover_image: string,
     year_of_last_publication:Date,
     subject : string,
-    product_code: number,
+    product_code?: number,
     isbn: string,
     book_number: string,
-    position_on_the_shelf:string
-  
+    price:string,
+    weight: string,
+    position_on_the_shelf:string,
+    children:ReactNode;
   }

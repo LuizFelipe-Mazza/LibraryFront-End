@@ -1,10 +1,12 @@
-import Principe from '../../assets/pqnp.webp';
+
 import {TbTrashX} from "react-icons/tb";
 import {IoIosAdd} from "react-icons/io";
 import {RiSubtractLine} from "react-icons/ri";
 import './myCart.scss';
+import { useState } from 'react';
 
-export function MyCart(){
+export function MyCart() {
+    const [count, setCount] = useState(0);
     return(
         <>
         <div className="myShopping">
@@ -13,27 +15,38 @@ export function MyCart(){
                 </div>
                 <div className="container">
                    <div className="image">
-                    <img src={Principe} alt="O Pequeno Príncipe Livro" />
+                    <div className="image-container">
+                    <h3>Imagem da Capa</h3>
+                    {/* <img src={} alt={`livro: ${original_name}`}/> */}
+                    </div>
+                    
                     </div>
                     <div className="descriptionShop">
-                        <h2>O Pequeno Príncipe</h2>
-                        <p>Quantidade de Páginas: <strong>127</strong></p>
-                        <p>Editora: <strong>Editora Fluano de tal</strong></p>
-                        <p>Código do Produto: <strong>0000123928</strong></p>
+                        {/* <h2>{original_name}</h2>
+                        <p>Quantidade de Páginas: <strong>{number_of_pages}</strong></p>
+                        <p>Editora: <strong>{name}</strong></p>
+                        <p>Código do Produto: <strong>{product_code}</strong></p> */}
                         <div className="options">
                            <div className="delete">
                             <button><TbTrashX className='trash'/></button>
                            </div>
+                           <div className="containerOptions">
+
                            <div className="subtract">
-                            <button><RiSubtractLine className='outItem'/></button>
+                            <button onClick={() => setCount(count - 1)}><RiSubtractLine className='outItem'/></button>
                            </div>
+                           <input className='count' type="number" 
+                           value={count}
+                           onChange ={(e:any)=> setCount(e.target.value)}
+                           />
                            <div className="add">
-                            <button><IoIosAdd className='addItem'/></button>
+                            <button onClick={() => setCount(count + 1)} ><IoIosAdd className='addItem'/></button>
+                           </div>
                            </div>
                         </div>
                     </div>
                 </div>
-           
+                <button className='buttonBuy'>Comprar Agora</button>
         </div>
         </>
     )
