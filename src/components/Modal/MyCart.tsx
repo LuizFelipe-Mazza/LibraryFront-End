@@ -1,14 +1,14 @@
 import { TbTrashX } from 'react-icons/tb'
-import { IoIosAdd } from 'react-icons/io'
-import { RiSubtractLine } from 'react-icons/ri'
+
 import './myCart.scss'
 import { useEffect, useState } from 'react'
 import api from '../../Services/axios'
 import { Book } from '../../Types/type'
+import { Counter } from '../Counter/Counter'
 
 
 export function MyCart(props: Book) {
-  const [count, setCount] = useState(0)
+  
   const [book, setBook] = useState<Book>()
 
   useEffect(() => {
@@ -49,22 +49,7 @@ export function MyCart(props: Book) {
                 </button>
               </div>
               <div className="containerOptions">
-                <div className="subtract">
-                  <button onClick={() => setCount(count - 1)}>
-                    <RiSubtractLine className="outItem" />
-                  </button>
-                </div>
-                <input
-                  className="count"
-                  type="number"
-                  value={count}
-                  onChange={(e: any) => setCount(e.target.value)}
-                />
-                <div className="add">
-                  <button onClick={() => setCount(count + 1)}>
-                    <IoIosAdd className="addItem" />
-                  </button>
-                </div>
+              <Counter/>
               </div>
             </div>
           </div>
