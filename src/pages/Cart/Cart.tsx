@@ -71,7 +71,7 @@ export function Cart(){
             <div className="description">
                 <h1>{book?.summary}</h1>
                 <div className="priceProduct">
-                    <p>R$ 127 <small>99</small></p>
+                    <p>R$ {book?.price}</p>
                     <span>em até <strong>12x sem juros</strong></span>
                 </div>
                 <div className="info">
