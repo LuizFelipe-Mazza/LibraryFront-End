@@ -1,4 +1,4 @@
-import styles from '../../css/presentation.module.css'
+import styles from './presentation.module.css'
 import book from '../../assets/reading.png'
 import nextPage from '../../assets/right.png'
 import { useNavigate } from 'react-router-dom'

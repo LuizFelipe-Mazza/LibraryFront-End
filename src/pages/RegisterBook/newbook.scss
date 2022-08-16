@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #202020;
+}
+.containerBookRegister {
+  display: flex;
+  justify-content: space-evenly;
+
+  aside {
+    margin-top: 3rem;
+    input,
+    select {
+      color: #fff;
+      outline-width: thin;
+      outline-color: #fff;
+      padding: 5px;
+      border: #7d5fff 2px solid;
+      background: transparent;
+      border-radius: 10px;
+    }
+    option {
+      color: #fff;
+      background: #181818;
+    }
+    select {
+      color: #c8d6e5;
+    }
+    .inputBook {
+      width: 31rem;
+    }
+    .formRegisterBook {
+      margin-bottom: 20px;
+    }
+    .code {
+      width: 20rem;
+      margin-left: 15px;
+    }
+    .numberBook {
+      width: 10rem;
+    }
+    .formRegisterBookCode,
+    .formRegisterSelect {
+      margin-bottom: 20px;
+    }
+    textarea {
+      color: #fff;
+      outline: none;
+      padding-left: 10px;
+      padding-top: 5px;
+      width: 31rem;
+      height: 13.5rem;
+      border: #7d5fff 2px solid;
+      background: transparent;
+      border-radius: 10px;
+    }
+    ::placeholder {
+      padding-left: 5px;
+      color: #c8d6e5;
+      opacity: 1px;
+    }
+    .btnSave {
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 31rem;
+      padding: 13px;
+      border: none;
+      border-radius: 6px;
+      background: #7d5fff;
+      color: #fff;
+      font-family: 'Roboto';
+      font-weight: 400;
+      .saveIcon {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+    }
+    .btnSave:hover {
+      transition: 0.4s ease;
+      box-shadow: 1px 1px 8px #a29bfe;
+    }
+    .btnSave:active {
+      background: #4834d4;
+      transition: 0.3s ease-out;
+    }
+  }
+  main {
+    margin-top: 3rem;
+    .photoBox {
+      input{
+      width: 30rem;
+      height: 20rem;
+      border-radius: 10px;
+      opacity: 13%;
+      background: #252525;
+    }
+  }
+    .btnUpload {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      width: 30rem;
+      padding: 12px;
+      border: 2px solid #7d5fff;
+      border-radius: 8px;
+      background: transparent;
+      color: #7d5fff;
+      font-family: 'Roboto';
+      font-weight: 400;
+      .uploadIcon {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+    }
+    .btnUpload:hover {
+      transition: 0.4s ease;
+      box-shadow: 1px 1px 8px #a29bfe;
+    }
+    .btnUpload:active {
+      background: #4834d4;
+      color: #fff;
+      transition: 0.2s ease-out;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.cardBuy {
+  background: #282828;
+  border-radius: 5px;
+  width: 225px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30px;
+  border: 0.1rem solid rgba(28, 28, 28, 0.1);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  .cardProduct {
+    .imageProduct {
+      padding: 5px;
+      width: 205px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.1rem solid rgba(28, 28, 28, 0.1);
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      img {
+        width: 205px;
+        max-width: 205px;
+        height: 230px;
+        height: 230px;
+        cursor: pointer;
+      }
+    }
+    .titleProduct {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h2 {
+        margin-top: 5px;
+        text-align: center;
+        font-family: 'Nunito';
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+    .price {
+      h1 {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Poppins';
+        font-weight: 700;
+        color: #7d5fff;
+      }
+    }
+  }
+  .buttons {
+    margin-top: 10px;
+    padding: 5px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 0.1rem solid rgba(28, 28, 28, 0.1);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    .buy {
+      button {
+        border: none;
+        background: #7d5fff;
+        color: #fff;
+        font-weight: 700;
+        font-family: 'Nunito';
+        padding: 8px;
+        width: 6rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        transition: 0.3s ease;
+        background: #fff;
+        color: #7d5fff;
+      }
+    }
+    .favorite {
+      button {
+        padding: 5px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #7d5fff;
+        cursor: pointer;
+        border: none;
+      }
+      .iconFavoriteBuy {
+        color: #fbc531;
+      }
+      button:hover {
+        transition: 0.3s ease;
+        background: #fff;
+
+        .iconFavoriteBuy {
+          color: #7d5fff;
+        }
+      }
+    }
+    .addToCart {
+      button {
+        padding: 5px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #7d5fff;
+        cursor: pointer;
+        border: none;
+      }
+      .iconCartBuy {
+        color: #fff;
+      }
+      button:hover {
+        transition: 0.3s ease;
+        background: #fff;
+
+        .iconCartBuy {
+          color: #7d5fff;
+        }
+      }
+    }
+  }
+}
