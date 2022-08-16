@@ -40,7 +40,7 @@ export function Card(props: Book) {
             <h2>{book?.original_name}</h2>
           </div>
           <div className="price">
-            <h1>{book?.price}</h1>
+            <h1>R$ {book?.price}</h1>
           </div>
           <div className="buttons">
             <div className="addToCart">
