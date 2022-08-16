@@ -37,13 +37,13 @@ export function Sidebar(){
                     <a href="/">Lista de Favoritos</a>
                     </li>
                     <li><ShoppingCartRoundedIcon className='icon'/>
-                    <a href="/">Meu Carrinho</a>
+                    <a href="/mycart">Meu Carrinho</a>
                     </li>
                     <li><AccountCircleRoundedIcon className='icon'/>
                     <a href="/">Minha Conta</a>
                     </li>
                     <li><LocalFireDepartmentRoundedIcon className='iconFire'/>
-                    <a href="/">Torra Livros</a>
+                    <a href="/book/4">Torra Livros</a>
                     </li>
                     </ul>
                 </nav>
