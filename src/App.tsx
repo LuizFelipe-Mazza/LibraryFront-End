@@ -11,12 +11,14 @@ import { Login } from './pages/Login/Login'
 import ProviderList from './pages/containers/ProviderList'
 import { FinalCart } from './pages/FinalCart/FinalCart'
 import { Cart } from './pages/Cart/Cart'
+import { CartContextProvider } from './Utils/CartContext'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <AuthContextProvider>
+          <CartContextProvider>
           <Routes>
             <Route path="/" children element={<PublicPage />} />
             <Route path="/welcome" children element={<Presentation />} />
@@ -29,6 +31,7 @@ function App() {
             <Route path="/book/:product_code" element={<Cart />} />
             <Route path="/mycart"element={<FinalCart/>}/>
           </Routes>
+          </CartContextProvider>
         </AuthContextProvider>
       </BrowserRouter>
     </div>

@@ -12,9 +12,10 @@ import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
 import { Card } from '../../../components/Card/Card';
 
 import { useEffect, useState } from 'react';
-import { ShowAllBooks, showBook } from '../../../Services/Book';
+import { ShowAllBooks} from '../../../Services/Book';
 import { Book } from '../../../Types/type';
 import Loading from '../../../components/Loading/Loading';
+
 
 
 export function PublicPage() {
