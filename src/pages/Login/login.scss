@@ -4,11 +4,9 @@
   box-sizing: border-box;
   font-family: 'Poppins';
 }
-// body {
-//   background: url(../../assets/bgGif.webp) no-repeat;
-//     background-size: cover;
-// }
 .containerOfContainer {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;

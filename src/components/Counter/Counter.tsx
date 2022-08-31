@@ -1,38 +1,57 @@
+import { useCartContext } from '../../context/CartContext'
+import { RiSubtractLine } from 'react-icons/ri'
 import { useState } from 'react'
 import { IoIosAdd } from 'react-icons/io'
-import { RiSubtractLine } from 'react-icons/ri'
-import './counter.scss'
-export function Counter() {
-  const [count, setCount] = useState(1)
- 
- 
+import { toast } from 'react-toastify'
 
-  // function handleAdd() {
-  //   if (count + 1 < 999) {
-  //     setCount(count + 1)
-  //   }
-  // }
-  // function handleSubtract() {
-  //   if (count - 1 > 0) {
-  //     setCount(count - 1)
-  //   }
-  // }
+import './counter.scss'
+
+export function Counter(product_code: any) {
+  const { cart, addQuantity, subtractQuantity } = useCartContext()
+  const [add, setAdd] = useState(1)
+  const addMoreProduct = async () => {
+    if (add === 0) {
+      setAdd(add + 1);
+    }
+    if (add <= 999) {
+      setAdd(add + 1);
+    }
+
+    addQuantity(product_code)
+    await toast.success('Item Adicionado!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
+  const takeOfProduct = () => {
+    if (add > 1) {
+      setAdd(add - 1);
+    }
+    subtractQuantity(product_code, cart);
+  }
+
+  console.log(cart)
   return (
     <>
       <div className="containerCount">
         <div className="subtract">
-          <button >
+          <button onClick={takeOfProduct}>
             <RiSubtractLine className="outItem" />
           </button>
         </div>
         <input
-          className="count"
-          type="number"
-          value={count}
-          onChange={(e: any) => setCount(e.target.value)}
+          type="text"
+          value={add}
+          onChange={(e: any) => setAdd(e.value.target)}
         />
         <div className="add">
-          <button >
+          <button onClick={addMoreProduct}>
             <IoIosAdd className="addItem" />
           </button>
         </div>

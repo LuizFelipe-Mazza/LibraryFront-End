@@ -30,7 +30,6 @@ export function ProviderForm() {
         setValue('phone_number', data.phone_number)
         setValue('cel', data.cel)         
       }
-      console.log(data);
     }
     getByProvider();
   }, [])

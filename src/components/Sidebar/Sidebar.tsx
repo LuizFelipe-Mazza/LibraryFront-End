@@ -7,6 +7,7 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 import './sidebar.scss'
+import { Link } from 'react-router-dom';
 
 export function Sidebar(){
     return(
@@ -37,7 +38,7 @@ export function Sidebar(){
                     <a href="/">Lista de Favoritos</a>
                     </li>
                     <li><ShoppingCartRoundedIcon className='icon'/>
-                    <a href="/mycart">Meu Carrinho</a>
+                    <Link to="/mycart">Meu Carrinho</Link>
                     </li>
                     <li><AccountCircleRoundedIcon className='icon'/>
                     <a href="/">Minha Conta</a>

@@ -1,58 +1,50 @@
-import { useEffect, useState } from 'react'
-import { ShowAllBooks } from '../../Services/Book'
-import { MyCart } from '../../components/Modal/MyCart'
-import { Book } from '../../Types/type'
-
-import Loading from '../../components/Loading/Loading'
+import { useCartContext } from '../../context/CartContext';
+import { MyCart } from '../../components/Modal/MyCart';
 import './finalCart.scss';
+import { FormatPrice } from '../../Utils/FormatPrice';
 
 export function FinalCart() {
-  const [books, setBooks] = useState<Book[]>([] as Book[])
-
-  useEffect(()=>{
-    ShowAllBooks().then(b =>{
-      setBooks(b)
-    })
-  },[])
-  
+  const { cart } = useCartContext()
+  console.log(cart, 'essa praga')
   return (
     <>
       <div className="containerFinal">
         <div className="title">
           <h1>Meu Carrinho</h1>
+          <div className="total">
+          <h1>Subtotal: <span>{FormatPrice(cart.total)}</span></h1>
+        </div>
         </div>
         <div className="allCarts">
-        {!books.length ? (
-          <div
-            style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
-            <Loading />
-          </div>
-        ) : (
-          books.map((book: Book) => (
-            <MyCart
-              key={book.product_code}
-              name={book.name}
-              name_translated={book.name_translated}
-              original_name={book.original_name}
-              number_of_pages={book.number_of_pages}
-              summary={book.summary}
-              authors={book.authors}
-              illustrators={book.illustrators}
-              cover_image={book.cover_image}
-              subject={book.subject}
-              product_code={book.product_code}
-              isbn={book.isbn}
-              book_number={book.book_number}
-              price={book.price}
-              weight={book.weight}
-              position_on_the_shelf={book.position_on_the_shelf}
-             /> ))
-        )}
-
-      </div>
-      <div className="buttons">
-    <button className="buttonBuy">Comprar Agora</button>
-      </div>
+          {!cart.products.length ? (
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                justifyContent: 'center',
+              }}
+            >
+              <p>Carrinho Vazio...</p>
+            </div>
+          ) : (
+            cart.products.map((item) => (
+              <MyCart
+                key={item.product_code}
+                quantity={item.quantity}
+                product_code={item.product_code}
+                price={item.price}
+                cover_image={item.cover_image}
+                number_of_pages={item.number_of_page}
+                book_number={item.number_of_page}
+                name={item.name}
+                name_translated={item.name_translated}
+              />
+            ))
+          )}
+        </div>
+        <div className="buttons">
+          <button className="buttonBuy">Finalizar Pedido</button>
+        </div>
       </div>
     </>
   )

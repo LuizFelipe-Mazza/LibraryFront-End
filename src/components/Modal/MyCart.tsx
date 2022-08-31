@@ -1,59 +1,60 @@
+import { FormatPrice } from '../../Utils/FormatPrice'
 import { TbTrashX } from 'react-icons/tb'
-
-import './myCart.scss'
-import { useEffect, useState } from 'react'
-import api from '../../Services/axios'
-import { Book } from '../../Types/type'
 import { Counter } from '../Counter/Counter'
 
+import './myCart.scss'
+import { useCartContext } from '../../context/CartContext';
 
-export function MyCart(props: Book) {
-  
-  const [book, setBook] = useState<Book>()
+interface Props {
+  quantity: number;
+  product_code: number;
+  price: number;
+  name: string;
+  cover_image: string;
+  number_of_pages: number;
+  book_number: number;
+  name_translated: string;
+}
+export function MyCart(props: Props) {
+  const {removeProduct} = useCartContext();
 
-  useEffect(() => {
-    api
-      .get(`/book/${props.product_code}`)
-      .then((response) => {
-        console.log(response)
-        setBook(response.data)
-      })
-      .catch((err) => {
-        console.error('ops! ocorreu um erro : ' + err)
-      })
-  }, [])
+  const remove = () => {
+    removeProduct(props.product_code)
+  }
 
   return (
     <>
       <div className="myShopping">
-        <div className="container">
-          <div className="image">
-            <img src={book?.cover_image} alt="" />
-          </div>
-          <div className="descriptionShop">
-            <h2>{book?.original_name}</h2>
-            <p>Preço:R$ {book?.price}</p>
-            <p>
-              Quantidade de Páginas: <strong>{book?.number_of_pages}</strong>
-            </p>
-            <p>
-              Editora: <strong>{book?.name}</strong>
-            </p>
-            <p>
-              Código do Produto: <strong>{book?.book_number}</strong>
-            </p>
-            <div className="options">
-              <div className="delete">
-                <button>
-                  <TbTrashX className="trash" />
-                </button>
-              </div>
-              <div className="containerOptions">
-              <Counter/>
+        {props && (
+          <div className="container">
+            <div className="image">
+              <img src={props.cover_image} alt="" />
+            </div>
+            <div className="descriptionShop">
+              <h2>{props.name_translated}</h2>
+              <p>Preço:{FormatPrice(props?.price as number)}</p>
+              <p>
+                Quantidade de Páginas: <strong>{props.number_of_pages}</strong>
+              </p>
+              <p>
+                Editora: <strong>{props?.name}</strong>
+              </p>
+              <p>
+                Código do Produto: <strong>{props.book_number}</strong>
+              </p>
+              <div className="options">
+                <div className="delete">
+                  <button onClick={remove}>
+                    <TbTrashX className="trash" />
+                  </button>
+                </div>
+                <div className="containerOptions">
+                  <Counter product_code={props.product_code} />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   )

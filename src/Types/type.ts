@@ -9,10 +9,10 @@ export type Book = {
     illustrators: string,
     cover_image: string,
     subject : string,
-    product_code?: number,
+    product_code: number,
     isbn: string,
     book_number: string,
-    price:string,
+    price:number,
     weight: string,
     position_on_the_shelf:string,
   }

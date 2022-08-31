@@ -73,7 +73,6 @@ export default function ProviderList() {
     const { data } = await api.get('/provider/paginate', {
       params: { page, pageSize },
     })
-    console.log(data)
     setProviders(data.results)
   }
   useEffect(() => {
