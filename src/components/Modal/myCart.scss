@@ -1,14 +1,13 @@
 .myShopping {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 
   .container {
     background: #202020;
-    margin-top: 3rem;
-    width: 50%;
-    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+    width: 98vw;
+    border-radius: 5px;
     display: flex;
     border: 0.1rem solid #282828;
 
@@ -22,38 +21,47 @@
     }
     .descriptionShop {
       display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin-left: 30px;
-      h2 {
-        font-family: 'Nunito';
-        color: #fff;
-      }
-      p {
-        margin-top: 8px;
-        color: #f5f6fa;
-        font-weight: 300;
-        strong {
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row;
+      .containerDescript {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 30px;
+        h2 {
           font-family: 'Nunito';
-          font-weight: 500;
-          color: #0984e3;
+          color: #fff;
+        }
+        p {
+          margin-top: 8px;
+          color: #f5f6fa;
+          font-weight: 300;
+          font-family: 'Nunito';
+          strong {
+            font-family: 'Nunito';
+            font-weight: 500;
+            color: #6c5ce7;
+          }
         }
       }
     }
   }
   .options {
     display: flex;
-    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 
     button {
       display: flex;
       align-items: center;
-      border-radius: 4px;
+      border-radius: 20px;
       border: none;
-      padding: 2px;
-      color: #fff;
-      background: #6c5ce7;
+      padding: 3px;
+      color: #ff4757;
+      border: #ff4757 1px solid;
+      background: transparent;
       cursor: pointer;
     }
     button:active {
@@ -61,6 +69,7 @@
     }
     .trash {
       font-size: 20px;
+      font-weight: 200;
     }
     .addItem {
       font-size: 20px;

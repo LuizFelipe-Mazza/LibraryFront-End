@@ -31,6 +31,7 @@ export function MyCart(props: Props) {
               <img src={props.cover_image} alt="" />
             </div>
             <div className="descriptionShop">
+              <div className="containerDescript">
               <h2>{props.name_translated}</h2>
               <p>Preço:{FormatPrice(props?.price as number)}</p>
               <p>
@@ -42,6 +43,7 @@ export function MyCart(props: Props) {
               <p>
                 Código do Produto: <strong>{props.book_number}</strong>
               </p>
+              </div>
               <div className="options">
                 <div className="delete">
                   <button onClick={remove}>
