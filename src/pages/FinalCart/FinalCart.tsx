@@ -11,8 +11,7 @@ import './finalCart.scss'
 export function FinalCart() {
   const { cart } = useCartContext()
   const navigate = useNavigate()
-  console.log(cart, 'essa praga')
-
+  
   const handleSubmitProduct = async () => {
     const data = cart.products.map((item) => {
       return { id_book: item.product_code, price: item.price }
@@ -22,7 +21,7 @@ export function FinalCart() {
       products: data,
     })
     const response = saveProduct
-    
+
     if ((await response).status < 400) {
       toast.success('Compra Finalizada')
     }
